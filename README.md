@@ -6,7 +6,7 @@ then link `~/.vimrc` to this folder's vimrc:
 
     cd ~/
     mkdir .vim
-    git clone http://github.com/rameshvs/dotvim .vim
+    git clone --recursive http://github.com/rameshvs/dotvim .vim
     ln -s $HOME/.vim/vimrc .vimrc
 
 I've tested this on Mac OS X 10.8 and a few flavors of linux. I can't make
