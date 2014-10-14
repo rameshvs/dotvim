@@ -142,6 +142,15 @@ set formatprg="par -w" " Use `par' for gq
 " Interaction stuff / Useful commands "
 """""""""""""""""""""""""""""""""""""""
 
+" thanks to http://superuser.com/q/401926
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
+
 set timeoutlen=500
 " all movements should move to the next line when at the end
 set whichwrap=b,s,h,l,~,[,],<,>
