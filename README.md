@@ -4,16 +4,14 @@ This is my vim configuration. To use this, you'll need to clone it into some
 folder (I use `~/.vim`, but you can use `~/.vim.d` or whatever you prefer) and
 then link `~/.vimrc` to this folder's vimrc:
 
-    cd ~/
-    mkdir .vim
-    git clone http://github.com/rameshvs/dotvim .vim
+    git clone --recursive http://github.com/rameshvs/dotvim $HOME/.vim
     ln -s $HOME/.vim/vimrc .vimrc
 
 I've tested this on Mac OS X 10.8 and a few flavors of linux. I can't make
 any guarantees, but I do try to make sure it works across all platforms
 that I use.
 
-Most of the settings within `vimrc` are well-documented, and vim's excellent
+Many of the settings in `vimrc` are well-documented, and vim's excellent
 `:help` should fill in the gaps.
 
 Plugins
