@@ -1,22 +1,25 @@
 .vim
 ---
 This is my vim configuration. To use this, you'll need to clone it into some
-folder (I use `~/.vim`, but you can use `~/.vim.d` or whatever you prefer) and
+folder (I use `~/.vim`, but you can use whatever you prefer) and
 then link `~/.vimrc` to this folder's vimrc:
 
     git clone --recursive http://github.com/rameshvs/dotvim $HOME/.vim
     ln -s $HOME/.vim/vimrc .vimrc
+    touch $HOME/.vim/viminfo
+    ln -s $HOME/.vim/viminfo $HOME/.viminfo
 
 I've tested this on Mac OS X 10.8 and a few flavors of linux. I can't make
 any guarantees, but I do try to make sure it works across all platforms
 that I use.
 
-Many of the settings in `vimrc` are well-documented, and vim's excellent
-`:help` should fill in the gaps.
+Many of the settings in `vimrc` are documented therein, and vim's excellent
+`:help` explains things even better.
 
 Plugins
 ---
 I organize my plugins using git submodules and [pathogen](http://github.com/tpope/vim-pathogen).
+This means that you need to do a recursive clone in order to get all the plugins!
 
 To add a plugin conveniently from the command line, you could define the
 following function at the command prompt:
@@ -28,11 +31,11 @@ to add the corresponding git repository.
 
 For example, to add the plugin vim-commentary from
 `https://github.com/tpope/vim-commentary`, use the following command from the
-command prompt:
+command prompt after defining `addrepo` as above:
 
     $ addrepo tpope/vim-commentary
 
-Here are all the plugins included here:
+Here are all the plugins included here along with brief descriptions:
 
 * [vim-commentary](http://github.com/tpope/vim-commentary): makes it easier to comment stuff out
 * [vim-repeat](http://github.com/tpope/vim-repeat): enables repeating of plugin commands
