@@ -5,7 +5,7 @@ folder (I use `~/.vim`, but you can use whatever you prefer) and
 then link `~/.vimrc` to this folder's vimrc:
 
     git clone --recursive http://github.com/rameshvs/dotvim $HOME/.vim
-    ln -s $HOME/.vim/vimrc .vimrc
+    ln -s $HOME/.vim/vimrc $HOME/.vimrc
     touch $HOME/.vim/viminfo
     ln -s $HOME/.vim/viminfo $HOME/.viminfo
 
