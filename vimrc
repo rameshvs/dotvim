@@ -18,6 +18,10 @@ let g:solarized_termcolors=16
 set background=dark
 colorscheme solarized
 
+""" Syntastic
+" pyflakes is fast and never complains about style
+let g:syntastic_python_checkers = ['pyflakes']
+
 """ CtrlP
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
@@ -135,7 +139,8 @@ set incsearch
 set hls
 nmap <space><space> :noh<CR>/<BS>
 
-set history=100000     " Space is free: let's store all our history
+
+set history=10000 " Space is free: let's store all our history
 set formatprg="par -w" " Use `par' for gq 
 
 """""""""""""""""""""""""""""""""""""""
@@ -199,14 +204,14 @@ set shiftwidth=4 " indentation size is 4 characters
 set tabstop=4    " Tabs are displayed as 4 characters (not 8!)
 set smarttab   " if on, uses shiftwidth @ line start, tabstop elsewhere
 " shortcut for making it 8 (for compatibility): toggle tabstop
-function! b:ToggleTabSize()
+function! s:ToggleTabSize()
     if tabstop==4
         tabstop=8
     elseif tabstop == 8
         tabstop=4
     endif
 endfunc
-nnoremap <C-Tab> :call b:ToggleTabSize()
+nnoremap <C-Tab> :call s:ToggleTabSize()
 
 """ typo correction
 abbreviate teh the
